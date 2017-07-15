@@ -14,6 +14,7 @@
 		87F4A57E1F1A002600A1EC20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87F4A57D1F1A002600A1EC20 /* Assets.xcassets */; };
 		87F4A5811F1A002600A1EC20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87F4A57F1F1A002600A1EC20 /* LaunchScreen.storyboard */; };
 		87F4A58C1F1A002700A1EC20 /* BonjourTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F4A58B1F1A002700A1EC20 /* BonjourTests.m */; };
+		B361B74AB24F0A439931170D /* libPods-Bonjour.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D03A7B9CFE618FD379C558 /* libPods-Bonjour.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,9 @@
 		87F4A5871F1A002700A1EC20 /* BonjourTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BonjourTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		87F4A58B1F1A002700A1EC20 /* BonjourTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BonjourTests.m; sourceTree = "<group>"; };
 		87F4A58D1F1A002700A1EC20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C66DF0045A6686E69600EE9 /* Pods-Bonjour.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bonjour.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bonjour/Pods-Bonjour.release.xcconfig"; sourceTree = "<group>"; };
+		C3D03A7B9CFE618FD379C558 /* libPods-Bonjour.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Bonjour.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCC9E08B99861FE86036C69B /* Pods-Bonjour.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bonjour.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bonjour/Pods-Bonjour.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B361B74AB24F0A439931170D /* libPods-Bonjour.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +65,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2FAD06AC6F857FF35DFE1EF8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3D03A7B9CFE618FD379C558 /* libPods-Bonjour.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		748CE7F7B394832DC6EE662E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CCC9E08B99861FE86036C69B /* Pods-Bonjour.debug.xcconfig */,
+				8C66DF0045A6686E69600EE9 /* Pods-Bonjour.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		87F4A5651F1A002600A1EC20 = {
 			isa = PBXGroup;
 			children = (
 				87F4A5701F1A002600A1EC20 /* Bonjour */,
 				87F4A58A1F1A002700A1EC20 /* BonjourTests */,
 				87F4A56F1F1A002600A1EC20 /* Products */,
+				748CE7F7B394832DC6EE662E /* Pods */,
+				2FAD06AC6F857FF35DFE1EF8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,9 +142,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 87F4A5901F1A002700A1EC20 /* Build configuration list for PBXNativeTarget "Bonjour" */;
 			buildPhases = (
+				BD9F4B89EDFD070076EE3372 /* [CP] Check Pods Manifest.lock */,
 				87F4A56A1F1A002600A1EC20 /* Sources */,
 				87F4A56B1F1A002600A1EC20 /* Frameworks */,
 				87F4A56C1F1A002600A1EC20 /* Resources */,
+				308C779DA645E171E775848F /* [CP] Embed Pods Frameworks */,
+				181DFFEE1477A7E8F4E5511E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,6 +234,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		181DFFEE1477A7E8F4E5511E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bonjour/Pods-Bonjour-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		308C779DA645E171E775848F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bonjour/Pods-Bonjour-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD9F4B89EDFD070076EE3372 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		87F4A56A1F1A002600A1EC20 /* Sources */ = {
@@ -351,6 +426,7 @@
 		};
 		87F4A5911F1A002700A1EC20 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCC9E08B99861FE86036C69B /* Pods-Bonjour.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Bonjour/Info.plist;
@@ -362,6 +438,7 @@
 		};
 		87F4A5921F1A002700A1EC20 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C66DF0045A6686E69600EE9 /* Pods-Bonjour.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Bonjour/Info.plist;
